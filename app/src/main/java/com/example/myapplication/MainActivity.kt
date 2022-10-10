@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
                 Ubicacion("https://loremflickr.com/1500/850?lock=2","Playa cerdeña"),
                 Ubicacion("https://loremflickr.com/1500/850?lock=3","Canal Brujas"),
                 Ubicacion("https://loremflickr.com/1500/850?lock=4","Notre Dame"),
-                Ubicacion("https://loremflickr.com/1500/850?lock=7","No se que 1"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=7","No se que 1s"),
                 Ubicacion("https://loremflickr.com/1500/850?lock=6","No se que 2"),
         )
         ){ persona ->
