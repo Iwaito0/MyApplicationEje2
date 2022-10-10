@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -11,8 +10,8 @@ import com.example.myapplication.databinding.ViewPersonaItemBinding
 
 
 class PersonasAdapter(
-    private val personas: List<Persona>,
-    private val personaClickedListener:  (Persona) -> Unit
+    private val ubicacions: List<Ubicacion>,
+    private val personaClickedListener:  (Ubicacion) -> Unit
     ):
     RecyclerView.Adapter<PersonasAdapter.ViewHolder>() {
 
@@ -30,25 +29,23 @@ class PersonasAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val persona = personas[position]
+            val persona = ubicacions[position]
             holder.bind(persona)
             holder.itemView.setOnClickListener { personaClickedListener(persona) }
     }
 
     override fun getItemCount(): Int {
-        return personas.size
+        return ubicacions.size
     }
 
 
     class ViewHolder(private val binding: ViewPersonaItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(persona: Persona){
+        fun bind(ubicacion: Ubicacion){
             Glide
                 .with(binding.root.context)
-                .load(persona.uImagen)
+                .load(ubicacion.uImagen)
                 .into(binding.imagenPer)
-            binding.textNombre.text = persona.nombre
-            binding.textTelefono.text =persona.telefono
-            binding.textCorreo.text=persona.correo
+            binding.textNombre.text = ubicacion.nombre
         }
     }
 

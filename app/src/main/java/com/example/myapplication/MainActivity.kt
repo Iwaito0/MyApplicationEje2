@@ -1,11 +1,8 @@
 package com.example.myapplication
 
-import android.app.Activity
-import android.opengl.GLES30
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.ViewDebug
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
 
@@ -18,9 +15,12 @@ class MainActivity : AppCompatActivity() {
 
         biding.recycler.adapter = PersonasAdapter(
             listOf(
-                Persona("https://loremflickr.com/240/320?lock=1","Pedro Jurado","987123456","pjurado@gmail.com"),
-                Persona("https://loremflickr.com/240/320?lock=2","Pepe Perez","987121256","ppe@gmail.com"),
-                Persona("https://loremflickr.com/240/320?lock=3","Antonio Gomez","934643456","aoox@gmail.com"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=1","Canal de Amsterdam"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=2","Playa cerdeña"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=3","Canal Brujas"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=4","Notre Dame"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=7","No se que 1"),
+                Ubicacion("https://loremflickr.com/1500/850?lock=6","No se que 2"),
         )
         ){ persona ->
             Toast.makeText(this@MainActivity,persona.nombre, Toast.LENGTH_SHORT).show()

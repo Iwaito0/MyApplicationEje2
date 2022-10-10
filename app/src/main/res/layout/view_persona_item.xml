@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    android:background="#672ECD"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imagenPer"
-        android:layout_width="94dp"
-        android:layout_height="90dp"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
         android:scaleType="fitStart"
         app:srcCompat="@mipmap/ic_launcher" />
 
@@ -20,28 +19,7 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:textColor="#FFFFFF"
-        android:translationX="110dp"
-        android:translationY="-80dp"
+        android:textColor="#000000"
         tools:text="nombre" />
 
-    <TextView
-        android:id="@+id/textTelefono"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:textColor="#FFFFFF"
-        android:translationX="110dp"
-        android:translationY="-80dp"
-        tools:text="telefono" />
-
-    <TextView
-        android:id="@+id/textCorreo"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:translationX="110dp"
-        android:translationY="-80dp"
-        tools:text="correo" />
-
-</LinearLayout>
+</GridLayout>
